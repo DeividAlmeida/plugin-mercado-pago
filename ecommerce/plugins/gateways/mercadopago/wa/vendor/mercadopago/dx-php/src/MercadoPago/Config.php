@@ -30,12 +30,12 @@ class Config
     {
         return [
             'base_url'      => 'https://api.mercadopago.com',
-            'CLIENT_ID'     => '6746500504163026',
-            'CLIENT_SECRET' => '8FVW4p77QSesMxrsK1CD7WkMSpPB1HRE',
+            'CLIENT_ID'     => '',
+            'CLIENT_SECRET' => '',
             'USER_ID'       => '',
             'APP_ID'        => '',
-            'ACCESS_TOKEN'  => 'APP_USR-6746500504163026-100511-067db8df0d5d351ad6f4efaf67c69c57-177309895',
-            'REFRESH_TOKEN' => 'APP_USR-c4ac67a3-4779-460f-87f3-fc13b5543411',
+            'ACCESS_TOKEN'  => '',
+            'REFRESH_TOKEN' => '',
             'sandbox_mode'  => false,
         ];
     }

@@ -1,24 +1,33 @@
 <?php
 // SDK de Mercado Pago
 require __DIR__ .  '/vendor/autoload.php';
-
+$frete = 130.00;
 // Configura credenciais
-MercadoPago\SDK::setAccessToken('PROD_ACCESS_TOKEN');
+MercadoPago\SDK::setAccessToken('APP_USR-6746500504163026-100511-067db8df0d5d351ad6f4efaf67c69c57-177309895');
 
-// Cria um objeto de preferência
 $preference = new MercadoPago\Preference();
 
-// Cria um item na preferência
+$shipments = new MercadoPago\Shipments();
+$shipments->cost = $frete;
+
+  
+# Building an item
+
 $item = new MercadoPago\Item();
-$item->title = 'Meu produto';
+$item->id = "00001";
+$item->title = "item"; 
 $item->quantity = 1;
-$item->unit_price = 75.56;
-$preference->items = array($item);
-$preference->save();
-?>
-<form action="/processar_pagamento" method="POST">
-  <script
-   src="https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js"
-   data-preference-id="<?php echo $preference->id; ?>">
-  </script>
-</form>
+$item->unit_price = 100.26;
+
+$item1 = new MercadoPago\Item();
+$item1->id = "00001";
+$item1->title = "item"; 
+$item1->quantity = 1;
+$item1->unit_price = 100.25;
+
+$preference->items = array($item, $item1);
+$preference->shipments = $shipments;
+$preference->save(); # Save the preference and send the HTTP Request to create
+
+# Return the HTML code for button
+header('Location:'.$preference->init_point);
