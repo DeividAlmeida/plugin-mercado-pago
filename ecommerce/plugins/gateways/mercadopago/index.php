@@ -10,6 +10,7 @@ $mercadopago = DBRead('ecommerce_plugins','*', "WHERE nome = 'mercadopago'")[0];
     <div class="card">
         <div class="card-header white">
         <strong>Configurar Meio de Pagamento</strong>
+        <button class="btn btn-sm behance text-white" data-toggle="modal" data-target="#AjudaMP"><i class="icon-question-circle"></i></button>
     </div>
     <div class="card-body">        
         <div class="row">
@@ -22,6 +23,22 @@ $mercadopago = DBRead('ecommerce_plugins','*', "WHERE nome = 'mercadopago'")[0];
         </div>
     </div>
 
+
+<div class="modal fade MP" id="AjudaMP" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog modal-sm" role="document" >
+			<div class="modal-content" style="border-color: secondary;">
+				<div class="modal-header r-0 bg-primary">
+					<h6 class="modal-title text-white" id="exampleModalLabel">Informações de Sobre o Plug-in</h6>
+					<a href="#" data-dismiss="modal" aria-label="Close" class="paper-nav-toggle paper-nav-white active"><i></i></a>
+				</div>
+
+				<div class="modal-body">
+					<p>
+						Seu servidor deve está rodando com a versão 7.1.0 do PHP ou superior.<br>
+					</p>
+				</div>
+			</div>
+		</div>
 <script>
 function mercadopago(){
     let m = new XMLHttpRequest();
