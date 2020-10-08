@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS `ecommerce_mercadopago` (
 
 INSERT INTO `ecommerce_mercadopago` (`id`,`token`) VALUES (NULL, NULL);
 
-INSERT INTO `ecommerce_plugins` (`id`, `titulo`, `nome`, `tipo`, `path`, `img`, `status`) VALUES (NULL, 'Mercado Pago', 'mercadopago', 'gateways', 'ecommerce/plugins/gateways/mercadopago', 'ecommerce/plugins/gateways/mercadopago/wa/assets/img/mercadopago.jpg', '');
+INSERT INTO `ecommerce_plugins` (`id`, `titulo`, `nome`, `tipo`, `path`, `img`, `status`) VALUES (2, 'Mercado Pago', 'mercadopago', 'gateways', 'ecommerce/plugins/gateways/mercadopago', 'ecommerce/plugins/gateways/mercadopago/wa/assets/img/mercadopago.jpg', '');
